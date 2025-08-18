@@ -24,11 +24,11 @@ return head;
 }
 
 
-  static Node NodeDeteleteSpecific(Node head){
+  static Node NodeDeteleteSpecific(Node head,int pos){
     int i;
 Node temp=head;
 Node prev=temp;
- for( i=0 ;i<=3-1;i++){
+ for( i=0 ;i<=pos-1;i++){
     prev=temp;
     temp=temp.next;
 
@@ -95,8 +95,9 @@ int option=sc.nextInt();
          }
          case 3:{
                 
-             
-     head=NodeDeteleteSpecific(head);
+             System.out.println("ENter YOur Position :");
+             int option=sc.nextInt();
+     head=NodeDeteleteSpecific(head,option);
      break;
          }
          case 4:{
@@ -110,4 +111,5 @@ int option=sc.nextInt();
    }
 
     }
+
 }
